@@ -11,6 +11,8 @@
    border: 1px solid grey;
    background-color: black;
    color: white;
+   display: flex;
+   flex-direction: column;
 }
 #state-name, #city-name, #landmark-name{
     font-size: 16px;

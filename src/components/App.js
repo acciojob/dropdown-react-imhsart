@@ -191,15 +191,15 @@ function App()
 		</select>
 		<div className="card" id="state-title">
 			<div id="state-name">{currState.name}</div>
-			<div id="state-description">{currState.description}</div>
+			<div id="state-description"><p>{currState.description}</p></div>
 		</div>
 		<div className="card" id="city-title">
 			<div id="city-name">{currCity.name}</div>
-			<div id="city-description">{currCity.description}</div>
+			<div id="city-description"><p>{currCity.description}</p></div>
 		</div>
 		<div className="card" id="landmark-title">
 			<div id="landmark-name">{currLand.name}</div>
-			<div id="landmark-description">{currLand.description}</div>
+			<div id="landmark-description"><p>{currLand.description}</p></div>
 		</div>
 	</div>
 	);
