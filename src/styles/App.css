@@ -14,7 +14,3 @@
    display: flex;
    flex-direction: column;
 }
-#state-name, #city-name, #landmark-name{
-    font-size: 16px;
-    font-weight: bold;
-}

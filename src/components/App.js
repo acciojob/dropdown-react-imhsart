@@ -189,16 +189,16 @@ function App()
 				})
 			}
 		</select>
-		<div className="card" id="state-title">
-			<div id="state-name">{currState.name}</div>
+		<div className="card">
+			<div id="state-title"><h3>{currState.name}</h3></div>
 			<div id="state-description"><p>{currState.description}</p></div>
 		</div>
 		<div className="card" id="city-title">
-			<div id="city-name">{currCity.name}</div>
+			<div id="city-title"><h3>{currCity.name}</h3></div>
 			<div id="city-description"><p>{currCity.description}</p></div>
 		</div>
 		<div className="card" id="landmark-title">
-			<div id="landmark-name">{currLand.name}</div>
+			<div id="landmark-title"><h3>{currLand.name}</h3></div>
 			<div id="landmark-description"><p>{currLand.description}</p></div>
 		</div>
 	</div>
