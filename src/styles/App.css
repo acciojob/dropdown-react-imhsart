@@ -8,6 +8,9 @@
    border-radius: 10px;
    padding: 10px;
    margin: 10px;
+   border: 1px solid grey;
+   background-color: black;
+   color: white;
 }
 #state-name, #city-name, #landmark-name{
     font-size: 16px;
