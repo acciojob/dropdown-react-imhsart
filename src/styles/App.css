@@ -1,16 +1,15 @@
-h1 {
-    color: #27aedb;
-    text-align: center;
-    }
-    
-
-button{
-    color: #27aedb;
-    text-align: center;
-    justify-content: center;
-    align-items: center;
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
 }
-
-.bg-pink{
-	background-color:pink;
+.card{
+   width: 400px;
+   border-radius: 10px;
+   padding: 10px;
+   margin: 10px;
+}
+#state-name, #city-name, #landmark-name{
+    font-size: 16px;
+    font-weight: bold;
 }

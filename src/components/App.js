@@ -1,4 +1,4 @@
-import React, { useState,useReducer } from "react";
+import React, { useState,useReducer} from "react";
 import "./../styles/App.css";
 
 
@@ -141,9 +141,66 @@ const states = [{
 function App() 
 {
 	// Do not alter/remove main div
+	const [selectedState, setSelectedState] = useState(0)
+	const [selectedCity, setSelectedCity] = useState(0)
+	const [selectedMark, setSelectedMark] = useState(0)
+	const cities = states[selectedState].city
+	const landmark = cities[selectedCity].landmarks
+	const currState = states[selectedState]
+	const currCity = cities[selectedCity]
+	const currLand = landmark[selectedMark]
+
+	function handleState(e){
+		let val = Number(e.target.value)
+		setSelectedState(val)
+		setSelectedCity(0)
+		setSelectedMark(0)
+	}
+	function handleCity(e){
+		let val = Number(e.target.value)
+		setSelectedCity(val)
+		setSelectedMark(0)
+	}
+	function handleLandmark(e){
+		let val = Number(e.target.value)
+		setSelectedMark(val)
+	}
+
 	return (
 	<div id="main">
-		
+		<select id="state" value={selectedState} onChange={handleState}>
+			{
+				states.map((item, index)=> {
+					return (<option key={index} value={index}>{item.name}</option>)
+				})
+			}
+		</select>
+		<select id="city" value={selectedCity} onChange={handleCity}>
+			{
+				cities.map((item, index) => {
+					return (<option key={index} value={index}>{item.name}</option>)
+				})
+			}
+		</select>
+		<select id="landmark" value={selectedMark} onChange={handleLandmark}>
+			{
+				landmark.map((item, index) => {
+					return (<option key={index} value={index}>{item.name}</option>)
+				})
+			}
+		</select>
+		<div className="card">
+			<div id="state-name">{currState.name}</div>
+			<div id="state-description">{currState.description}</div>
+		</div>
+		<div className="card">
+			<div id="city-name">{currCity.name}</div>
+			<div id="city-description">{currCity.description}</div>
+		</div>
+		<div className="card">
+			<div id="landmark-name">{currLand.name}</div>
+			<div id="landmark-description">{currLand.description}</div>
+		</div>
 	</div>
 	);
 }
